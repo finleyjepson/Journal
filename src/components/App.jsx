@@ -1,10 +1,11 @@
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+// Components
 import Home from './Home'
 import NewEntry from './NewEntry'
 import CategorySelection from './CategorySelection'
 import NavBar from './NavBar'
 import ShowEntry from './ShowEntry'
-import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
 
 function App() {
 	const [categories, setCategories] = useState([])
@@ -15,7 +16,7 @@ function App() {
 			.then(response => response.json())
 			.then(data => setCategories(data))
 
-			fetch(`http://127.0.0.1:4000/entries`)
+		fetch(`http://127.0.0.1:4000/entries`)
 			.then(response => response.json())
 			.then(data => setEntries(data))
 	}, [])
@@ -26,7 +27,6 @@ function App() {
 			category: categories[cat_id]._id,
 			content: content
 		}
-
 		// post new entry to api
 		const res = await fetch(`http://127.0.0.1:4000/entries`, {
 			method: 'POST',
