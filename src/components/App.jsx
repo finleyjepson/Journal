@@ -42,7 +42,7 @@ function App() {
 
 	function ShowEntryWrapper() {
 		const { id } = useParams()
-		return <ShowEntry entry={entries[id]} />
+		return <ShowEntry entry={entries[id]} setEntries={setEntries} />
 	}
 
 	return (
