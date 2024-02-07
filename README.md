@@ -1,8 +1,29 @@
-# React + Vite
+# Journal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Journal Website that i am using to learn how to use ReactJS.
 
-Currently, two official plugins are available:
+it uses the [Journal API](https://github.com/finleyjepson/Journal-Api) to store and retrieve data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+1. Clone the repository
+2. Run `npm install` to install the dependencies
+3. Run `npm run dev` to start the development server
+4. Install the [Journal API](https://github.com/finleyjepson/Journal-Api) and follow the instructions in the README
+
+### Packages
+
+```json
+"bulma": "^0.9.4",
+"prop-types": "^15.8.1",
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"react-router-dom": "^6.22.0"
+```
+
+## Features
+
+- Add a new journal entry
+- View all journal entries
+  - View journal entries by category
+- View a single journal entry
