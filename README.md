@@ -27,3 +27,4 @@ it uses the [Journal API](https://github.com/finleyjepson/Journal-Api) to store 
 - View all journal entries
   - View journal entries by category
 - View a single journal entry
+  - Delete the journal entry
