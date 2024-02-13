@@ -12,11 +12,11 @@ function App() {
 	const [entries, setEntries] = useState([])
 
 	useEffect(() => {
-		fetch(`http://127.0.0.1:4000/categories`)
+		fetch(`https://journal-api-okiv.onrender.com/categories`)
 			.then(response => response.json())
 			.then(data => setCategories(data))
 
-		fetch(`http://127.0.0.1:4000/entries`)
+		fetch(`https://journal-api-okiv.onrender.com/entries`)
 			.then(response => response.json())
 			.then(data => setEntries(data))
 	}, [])
@@ -28,7 +28,7 @@ function App() {
 			content: content
 		}
 		// post new entry to api
-		const res = await fetch(`http://127.0.0.1:4000/entries`, {
+		const res = await fetch(`https://journal-api-okiv.onrender.com/entries`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

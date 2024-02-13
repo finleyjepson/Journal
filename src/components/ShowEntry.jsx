@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 function ShowEntry({ entry, setEntries }) {
     const nav = useNavigate()
     async function deleteEntry() {
-        const res = await fetch(`http://localhost:4000/entries/${entry._id}`, {
+        const res = await fetch(`https://journal-api-okiv.onrender.com/entries/${entry._id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
